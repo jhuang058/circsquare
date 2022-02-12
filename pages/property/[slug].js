@@ -29,7 +29,7 @@ export const Property = ({
         {reviewAmount} reivew{isMultiple(reviewAmount)}
       </p>
 
-      <div classname="images-section">
+      <div className="images-section">
         <Image identifier="main-image" image={mainImage} />
         <div className="sub-images-section">
           {images.map(({_key, asset}, image) => (
@@ -54,7 +54,7 @@ export const Property = ({
             <b>Enhanced Clean</b>
           </h4>
           <p>
-            This host is committed to Airbnb's 5-step enhanced cleaning process
+            This host is committed to Airbnb&apos;s 5-step enhanced cleaning process
           </p>
           {/* make an amenities section instead */}
           <h4>
@@ -68,7 +68,7 @@ export const Property = ({
             <b>House rules</b>
           </h4>
           <p>
-            This place ins't suitable for pets and the host does not allow
+            This place ins&apos;t suitable for pets and the host does not allow
             parties or smoking.
           </p>
         </div>

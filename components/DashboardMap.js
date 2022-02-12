@@ -12,10 +12,10 @@ const DashboardMap = ({ properties }) => {
     height: "100vh",
   };
 
-    const center = {
-      lat: properties[0].location?.lat,
-      lng: properties[0].location?.lng
-    };
+  const center = {
+    lat: properties[0].location?.lat,
+    lng: properties[0].location?.lng,
+  };
 
   const [map, setMap] = React.useState(null);
 
@@ -43,6 +43,7 @@ const DashboardMap = ({ properties }) => {
       {/* Child components, such as markers, info windows, etc. */}
       {properties.map((property, index) => (
         <Marker
+          key={property._id}
           position={{
             lat: property?.location?.lat,
             lng: property?.location?.lng,
