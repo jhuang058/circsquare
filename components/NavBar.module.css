@@ -1,0 +1,48 @@
+/* 
+.header {
+    position: sticky;
+    z-index: 100; 
+    box-shadow: rgb(0 0 0 /12%) 0 6px 16px;
+    padding: 30px;
+  } */
+
+  .header {
+    width: 80%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0 10%;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 60px;
+    background-image: url('../images/circsquare-logo.png');
+    background-size: 50px;
+  }
+
+  .header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .header li {
+    margin-left: 3rem;
+  }
+  
+  .header a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #9f0c44;
+  }
+  
+  .header a:hover,
+  .header a:active,
+  .header a.active {
+    color: black;
+  }

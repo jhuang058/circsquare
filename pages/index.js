@@ -2,33 +2,31 @@ import { sanityClient } from "../sanity";
 import { urlFor } from "../sanity";
 import Link from "next/link";
 import { isMultiple } from "../utils";
-import DashboardMap from "../components/DashboardMap";
+import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
+import { Avatar } from "@mui/material";
+import ClickAwayListener from "../components/ClickAwayListener"
 
-const Home = ({ properties }) => {
+const Home = ({ roomUnits }) => {
+
   return (
     <>
-      {properties && (
+      {roomUnits && (
         <div className="main">
           <div className="feed-container">
-            <h1>Places to stay near you</h1>
             <div className="feed">
-              {properties.map((property, index) => (
-                <Link href={`property/${property.slug.current}`} key={property._id}>
+              {roomUnits.map((roomUnit, index) => (
+                // <Link href={`roomUnit/${roomUnit.slug.current}`} key={roomUnit._id}>
                   <div className="card">
-                    <img src={urlFor(property.mainImage)} />
-                    <p>
-                      {property.reviews.length} review
-                      {isMultiple(property.reviews.length)}
-                    </p>
-                    <h3>{property.title}</h3>
-                    <h3>{property.pricePerNight}/per Night</h3>
+                    <img src={urlFor(roomUnit.mainImage)}/>
+                    <h3>{roomUnit.title}</h3>
+                    <Avatar src={urlFor(roomUnit.tenant.image)}/>
+                    <ClickAwayListener name={roomUnit.tenant.name} phoneNumber={roomUnit.tenant.phoneNumber} memo={roomUnit.tenant.memo}/>
+                    <p><b>Start Date: </b>{roomUnit.startDate} <br/> <b>End Date: </b> {roomUnit.endDate !== null ? roomUnit.endDate:(roomUnit.endDateMemo !== null ? roomUnit.endDateMemo:"indefinite")}</p>
                   </div>
-                </Link>
               ))}
             </div>
           </div>
           <div className="map">
-            <DashboardMap properties={properties} />
           </div>
         </div>
       )}
@@ -37,19 +35,33 @@ const Home = ({ properties }) => {
 };
 
 export const getServerSideProps = async () => {
-  const query = '*[ _type == "property"]';
-  const properties = await sanityClient.fetch('*[ _type == "property"]');
+  const query = `*[ _type == "unit"]{
+    unitTitle,
+    mainImage,
+    tenant->{
+        _id,
+        name,
+        slug,
+        image,
+        memo,
+        phoneNumber
+    },
+    startDate,
+    endDate,
+    endDateMemo
+}`;
+  const roomUnits = await sanityClient.fetch(query);
 
-  if (!properties.length) {
+  if (!roomUnits.length) {
     return {
       props: {
-        properties: [],
+        roomUnits: [],
       },
     };
   } else {
     return {
       props: {
-        properties,
+        roomUnits
       },
     };
   }

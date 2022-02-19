@@ -26,7 +26,7 @@ export const Property = ({
         <b>{title}</b>
       </h1>
       <p>
-        {reviewAmount} reivew{isMultiple(reviewAmount)}
+        {reviewAmount} review{isMultiple(reviewAmount)}
       </p>
 
       <div className="images-section">
