@@ -20,7 +20,7 @@ const Home = ({ roomUnits }) => {
                     <img src={urlFor(roomUnit.mainImage)}/>
                     <h3>{roomUnit.title}</h3>
                     <Avatar src={urlFor(roomUnit.tenant.image)}/>
-                    <ClickAwayListener name={roomUnit.tenant.name} phoneNumber={roomUnit.tenant.phoneNumber} memo={roomUnit.tenant.memo}/>
+                    {/* <ClickAwayListener name={roomUnit.tenant.name} phoneNumber={roomUnit.tenant.phoneNumber} memo={roomUnit.tenant.memo}/> */}
                     <p><b>Start Date: </b>{roomUnit.startDate} <br/> <b>End Date: </b> {roomUnit.endDate !== null ? roomUnit.endDate:(roomUnit.endDateMemo !== null ? roomUnit.endDateMemo:"indefinite")}</p>
                   </div>
               ))}
