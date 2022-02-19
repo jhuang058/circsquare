@@ -16,7 +16,7 @@ const Home = ({ roomUnits }) => {
             <div className="feed">
               {roomUnits.map((roomUnit, index) => (
                 // <Link href={`roomUnit/${roomUnit.slug.current}`} key={roomUnit._id}>
-                  <div className="card">
+                  <div className="card" key={index}>
                     <img src={urlFor(roomUnit.mainImage)}/>
                     <h3>{roomUnit.title}</h3>
                     <Avatar src={urlFor(roomUnit.tenant.image)}/>
