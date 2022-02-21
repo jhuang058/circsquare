@@ -1,7 +1,7 @@
 import Link from "next/link";
 import classes from "./NavBar.module.css";
-import HomeIcon from "@mui/icons-material/Home";
-import AddBoxIcon from "@mui/icons-material/AddBox";
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import AddOutlinedIcon from '@mui/icons-material/AddOutlined';import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
 
 const NavBar = () => {
   return (
@@ -10,11 +10,15 @@ const NavBar = () => {
       <nav>
         <ul>
           <li>
-            <HomeIcon />
+            <HomeOutlinedIcon />
             <Link href="/">HomePage</Link>
           </li>
           <li>
-            <AddBoxIcon />
+            <AnalyticsOutlinedIcon />
+            <Link href="/property-statistics">Performance</Link>
+          </li>
+          <li>
+            <AddOutlinedIcon />
             <Link href="/new-listing">Add New Listing</Link>
           </li>
         </ul>

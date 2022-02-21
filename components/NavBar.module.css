@@ -38,11 +38,11 @@
   .header a {
     text-decoration: none;
     font-size: 1.5rem;
-    color: #9f0c44;
+    color: rgb(0, 0, 0);
   }
   
   .header a:hover,
   .header a:active,
   .header a.active {
-    color: black;
+    background-color: pink;
   }

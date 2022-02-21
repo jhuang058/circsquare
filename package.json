@@ -14,15 +14,21 @@
     "@material-ui/icons": "^4.11.2",
     "@mui/icons-material": "^5.4.2",
     "@react-google-maps/api": "^2.7.0",
+    "firebase": "^9.6.7",
+    "firebaseui": "^6.0.0",
     "next": "12.0.10",
     "next-sanity": "^0.4.0",
     "next-transpile-modules": "^9.0.0",
     "react": "17.0.2",
     "react-dater": "^1.6.0",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-firebase-hooks": "^5.0.2",
+    "react-firebaseui": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "8.9.0",
-    "eslint-config-next": "12.0.10"
+    "eslint-config-next": "12.0.10",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
   }
 }

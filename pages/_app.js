@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
       <NavBar />
       {/* <Drawer /> */}
       <Component {...pageProps} />
-      <Pagination />
+      
     </>
   );
 }

@@ -11,3 +11,7 @@ export function formatPhoneNumber(phoneNumberString) {
     }
     return null;
   }
+
+  export function addDollarSign(value) {
+    return value ? '$' : ''
+  }
