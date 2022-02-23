@@ -11,27 +11,27 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Auth from "../components/Auth";
 
 const Home = ({ roomUnits }) => {
-  const [user, loading, error] = useAuthState(firebase.auth());
+  //const [user, loading, error] = useAuthState(firebase.auth());
 
-  console.log("Loading:", loading, "|", "Current user:", user);
+  //console.log("Loading:", loading, "|", "Current user:", user);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        height: "100vh",
-        width: "100vw",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        gridGap: 8,
-        background:
-          "linear-gradient(180deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)",
-      }}
-    >
-      {loading && <h4>Loading...</h4>}
-      {!user && <Auth />}
-      {user && (
+    // <div
+    //   style={{
+    //     display: "flex",
+    //     height: "100vh",
+    //     width: "100vw",
+    //     alignItems: "center",
+    //     justifyContent: "center",
+    //     flexDirection: "column",
+    //     gridGap: 8,
+    //     background:
+    //       "linear-gradient(180deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)",
+    //   }}
+    // >
+      // {loading && <h4>Loading...</h4>}
+      // {!user && <Auth />}
+      // {user && (
         <>
           {roomUnits && (
             <div className="main">
@@ -61,12 +61,11 @@ const Home = ({ roomUnits }) => {
               <div className="rent-table">
                 <RentTable roomUnits={roomUnits} />
               </div>
-              {/* <Pagination /> */}
             </div>
           )}
         </>
-      )}
-    </div>
+    //   )}
+    // </div>
   );
 };
 

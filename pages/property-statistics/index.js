@@ -1,7 +1,7 @@
 import React from "react";
-import IncomeTable from "../../components/financials/IncomeTable";
+import IncomeTable from "../../components/tables/IncomeTable";
 import { sanityClient } from "../../sanity";
-import ExpensesTable from "../../components/Financials/ExpensesTable"
+import ExpensesTable from "../../components/tables/ExpensesTable"
 
 const index = ({ roomUnits, property }) => {
 
