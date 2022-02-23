@@ -11,7 +11,7 @@ const config = {
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   useCdn: process.env.NEXT_PUBLIC_SANITY_USE_CDN,
-  apiVersion: process.env.NEXT_PUBLIC_SANITY_APP_VERSION
+  apiVersion: "2021-10-21"
   /**
    * Set useCdn to `false` if your application require the freshest possible
    * data always (potentially slightly slower and a bit more expensive).

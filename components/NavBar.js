@@ -19,7 +19,7 @@ const NavBar = () => {
           </li>
           <li>
             <AddOutlinedIcon />
-            <Link href="/new-listing">Add New Listing</Link>
+            <Link href="/new-listing">NewListing</Link>
           </li>
         </ul>
       </nav>

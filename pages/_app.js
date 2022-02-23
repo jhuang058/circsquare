@@ -7,7 +7,6 @@ import Pagination from "../components/Pagination";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <AppBar />
       <NavBar />
       {/* <Drawer /> */}
       <Component {...pageProps} />
