@@ -1,14 +1,9 @@
 import { sanityClient } from "../sanity";
 import { urlFor } from "../sanity";
-import Link from "next/link";
-import { isMultiple } from "../utils";
 import { Avatar } from "@mui/material";
 import ClickAwayListener from "../components/ClickAwayListener";
 import RentTable from "../components/tables/RentTable";
-import Pagination from "../components/Pagination";
-import firebase from "../firebase/clientApp";
-import { useAuthState } from "react-firebase-hooks/auth";
-import Auth from "../components/Auth";
+
 
 const Home = ({ roomUnits }) => {
   //const [user, loading, error] = useAuthState(firebase.auth());
